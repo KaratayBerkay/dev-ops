@@ -281,6 +281,46 @@ smove users admins "Jane"
 > 1  # 1 if member is moved, 0 if member is not moved
 ```
 
+Difference between two sets with sdiff <key1> <key2>
+```bash
+sdiff users admins
+> 1) "John"
+```
+
+HyperLogLog is a probabilistic data structure used to count unique values in a set. 
+```bash
+pfadd users "John"
+pfadd users "Jane"
+pfadd users "Jane"
+pfcount users
+> 2  # number of unique values
+```
+
+Pub with publish <channel> <message>
+```bash
+publish notifications "Hello"
+> 0  # number of subscribers
+```
+Sub with subscribe <channel>
+```bash
+subscribe notifications
+> Reading messages... (press Ctrl-C to quit)
+> 1) "subscribe"
+> 2) "notifications"
+> 3) (integer) 1
+```
+
+Dump key with dump <key>
+```bash
+dump users
+> "\x00\x06\x00\x00\x00\x12\x00\x00\x00\"
+```
+
+Restore key with restore <key> <ttl> <serialized-value>
+```bash
+restore users 0 "\x00\x06\x00\x00\x00\x12\x00\x00\x00\"
+> OK
+```
 
 
 
