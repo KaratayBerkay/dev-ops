@@ -27,3 +27,13 @@ then
 else
   echo "$file_name is not found"
 fi
+
+# is file empty or NOT
+if [ -s $file_name ]
+then
+  echo "$file_name is empty"
+else
+  echo "$file_name is NOT empty"
+fi
+
+
