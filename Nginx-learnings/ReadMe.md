@@ -6,7 +6,12 @@ ls -l
 ```
 
 ```shell
-cat etc/passwd
+cat /etc/passwd
+cat /proc/cpuinfo
+ls -l /var/log/nginx/
+```shell
+-rw-r----- 1 www-data adm  0 Ara 27 13:58 access.log
+-rw-r----- 1 www-data adm 78 Ara 27 13:58 error.log
 ```
 
 ```shell
