@@ -80,3 +80,38 @@ show shared_memory_size;
  143MB
 (1 row)
 ```
+
+```shell
+select * from pg_stat_user_tables;
+```
+
+```shell
+SELECT pg_size_pretty(pg_database_size('postgres'));
+```
+
+```shell
+explain analyze select * from user_service_user;
+```
+
+```shell
+                                                   QUERY PLAN                                                   
+----------------------------------------------------------------------------------------------------------------
+ Seq Scan on user_service_user  (cost=0.00..10.40 rows=40 width=1996) (actual time=0.019..0.020 rows=2 loops=1)
+ Planning Time: 0.399 ms
+ Execution Time: 0.038 ms
+(3 rows)
+```
+
+Extensions
+1. pg_stat_statements
+2. PostGIS
+3. ElasticSearch
+4. Postgres_fdw
+5. TimescaleDB
+6. PostPic
+7. IntArray
+8. Pgsphere
+9. pg_cron
+
+
+
