@@ -35,6 +35,11 @@ hostname - print system name
 ``` bash
 hostname  # print system name
 ```
+hostnamectl- device info
+``` bash
+hostnamectl  # print device
+```
+
 uname - kernel info
 ``` bash
 uname -a  # print all kernel info
